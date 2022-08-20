@@ -9,3 +9,7 @@
   (when ok?
     (mason-lspconfig.setup {})))
 
+(let [(ok? trouble) (pcall #(require :trouble))]
+  (when ok?
+    (trouble.setup {})))
+

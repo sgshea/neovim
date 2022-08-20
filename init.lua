@@ -34,7 +34,5 @@ require("impatient")
 -- Aniseed looks for this when it's loaded then loads the rest of your
 -- configuration if it's set.
 vim.g["aniseed#env"] = {
-  module = "core.init",
-  compile = true
-  }
+  module = "core.init",}
 

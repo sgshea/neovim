@@ -4,6 +4,7 @@
 
 ;; Contains generic configurations and all plugins
 ;; Some helper functions in plugin.fnl
+(nvim.set_keymap :n :<space> :<nop> {:noremap true})
 
 (set nvim.o.termguicolors true) ;; set term gui colors
 (set nvim.o.mouse "a")  ;; allow mouse to be used
@@ -24,6 +25,9 @@
 (set nvim.o.relativenumber false) ;; relative numbered lines
 (set nvim.o.list true)
 
+;; shell
+(set nvim.o.shell "zsh")
+
 ;; Mappings
 (set nvim.g.mapleader " ")
 (set nvim.g.maplocalleader ",")
@@ -37,9 +41,10 @@
 ;; Large/Important Plugins
             :nvim-lua/plenary.nvim {}
             :kyazdani42/nvim-web-devicons {}
-            :nvim-telescope/telescope.nvim {} ;; telescope fuzzy finder
+            :nvim-telescope/telescope.nvim {:mod :telescope} ;; telescope fuzzy finder
             :nvim-treesitter/nvim-treesitter {:run ":TSUpdate" :mod :treesitter} ;; treesitter
             :kyazdani42/nvim-tree.lua {:mod :nvim-tree} ;; file explorer
+            :akinsho/toggleterm.nvim {:mod :toggleterm}
 ;; Languages and completion
             :tpope/vim-dispatch {}
             :clojure-vim/vim-jack-in {}
@@ -54,17 +59,19 @@
             :hrsh7th/nvim-cmp {:mod :cmp} ;; completion
             :L3MON4D3/LuaSnip {} ;; snippets
             :saadparwaiz1/cmp_luasnip {}
+            :folke/trouble.nvim {}
 ;; Debugging
             :rcarriga/nvim-dap-ui {:mod :dap :requires [[:mfussenegger/nvim-dap]]}
 
 ;; Appearance
             :stevearc/dressing.nvim {}
-            :goolord/alpha-nvim {:mod :alpha} ;; startscreen
-            :lukas-reineke/indent-blankline.nvim {} ;; indent guides
+            :lukas-reineke/indent-blankline.nvim {
+                                                  :filetype_exclude "dashboard"} ;; indent guides
             :p00f/nvim-ts-rainbow {} ;; rainbow brackets
-            :sainnhe/gruvbox-material {:mod :gruvbox} ;; gruvbox colorscheme
+            :sainnhe/gruvbox-material {:mod :themes} ;; gruvbox colorscheme
             :romgrk/barbar.nvim {:mod :barbar} ;; top bufferline
             :nvim-lualine/lualine.nvim {:mod :lualine} ;; statusline
+            :lewis6991/gitsigns.nvim {:mod :gitsigns}
 ;; General Plugins
             :rcarriga/nvim-notify {} ;; fancy notifications
             :folke/which-key.nvim {:mod :which-key} ;; helps with keybindings
