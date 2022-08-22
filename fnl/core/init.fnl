@@ -65,9 +65,9 @@
             :rcarriga/nvim-dap-ui {:mod :dap :requires [[:mfussenegger/nvim-dap]]}
 
 ;; Appearance
+            :goolord/alpha-nvim {:mod :alpha}
             :stevearc/dressing.nvim {}
-            :lukas-reineke/indent-blankline.nvim {
-                                                  :filetype_exclude "dashboard"} ;; indent guides
+            :lukas-reineke/indent-blankline.nvim {}
             :p00f/nvim-ts-rainbow {} ;; rainbow brackets
             :sainnhe/gruvbox-material {:mod :themes} ;; gruvbox colorscheme
             :romgrk/barbar.nvim {:mod :barbar} ;; top bufferline
