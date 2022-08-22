@@ -32,8 +32,6 @@
 (set nvim.g.mapleader " ")
 (set nvim.g.maplocalleader ",")
 
-(set vim.notify (require "notify"))
-
 (plugin.use
 ;; Required
             :Olical/aniseed {} ;; Fennel
