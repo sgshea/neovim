@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/sammy/.local/share/nvim/site/pack/packer/start/conjure",
     url = "https://github.com/Olical/conjure"
   },
+  ["distant.nvim"] = {
+    loaded = true,
+    path = "/home/sammy/.local/share/nvim/site/pack/packer/start/distant.nvim",
+    url = "https://github.com/chipsenkbeil/distant.nvim"
+  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/sammy/.local/share/nvim/site/pack/packer/start/dressing.nvim",

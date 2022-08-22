@@ -1,8 +1,7 @@
 (module core.plugin.nvim-tree
-        {autoload {nvim aniseed.nvim}})
+        {autoload {nvim aniseed.nvim
+                   nvim-tree nvim-tree}})
 
-(let [(ok? nvim-tree) (pcall #(require :nvim-tree))]
-  (when ok?
-    (nvim-tree.setup {})))
+(nvim-tree.setup)
 
 (nvim.set_keymap :n :<leader>nt ":NvimTreeToggle<CR>" {:noremap true})

@@ -40,11 +40,12 @@
             :Olical/conjure {} ;; Lisps
 ;; Large/Important Plugins
             :nvim-lua/plenary.nvim {}
-            :kyazdani42/nvim-web-devicons {}
+            :kyazdani42/nvim-web-devicons {:mod :devicons}
             :nvim-telescope/telescope.nvim {:mod :telescope} ;; telescope fuzzy finder
             :nvim-treesitter/nvim-treesitter {:run ":TSUpdate" :mod :treesitter} ;; treesitter
             :kyazdani42/nvim-tree.lua {:mod :nvim-tree} ;; file explorer
             :akinsho/toggleterm.nvim {:mod :toggleterm}
+            :chipsenkbeil/distant.nvim {:mod :distant} ;; remote plugin
 ;; Languages and completion
             :tpope/vim-dispatch {}
             :clojure-vim/vim-jack-in {}
@@ -59,7 +60,7 @@
             :hrsh7th/nvim-cmp {:mod :cmp} ;; completion
             :L3MON4D3/LuaSnip {} ;; snippets
             :saadparwaiz1/cmp_luasnip {}
-            :folke/trouble.nvim {}
+            :folke/trouble.nvim {:mod :trouble}
 ;; Debugging
             :rcarriga/nvim-dap-ui {:mod :dap :requires [[:mfussenegger/nvim-dap]]}
 
