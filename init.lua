@@ -33,6 +33,12 @@ require("impatient")
 -- Enable Aniseed's automatic compilation and loading of Fennel source code.
 -- Aniseed looks for this when it's loaded then loads the rest of your
 -- configuration if it's set.
-vim.g["aniseed#env"] = {
-  module = "core.init",}
-
+--
+-- Check for vscode, and if found load a much shorter config
+if vim.g.vscode then
+    vim.g["aniseed#env"] = {
+      module = "code.init",}
+  else
+    vim.g["aniseed#env"] = {
+      module = "core.init",}
+  end

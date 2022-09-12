@@ -1,5 +1,4 @@
-(module core.plugin.dap
-        {autoload {nvim aniseed.nvim}})
+(module core.plugin.dap)
 
 (let [(ok? dapui) (pcall require :dapui)]
   (when ok?
