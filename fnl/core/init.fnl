@@ -51,13 +51,16 @@
             :williamboman/mason.nvim {:branch "main"} ;; lsp, dap, linter config
             :williamboman/mason-lspconfig.nvim {} ;; use command "Mason"
             :neovim/nvim-lspconfig {:mod :lsp}
-            :hrsh7th/cmp-nvim-lsp {}
-            :hrsh7th/cmp-buffer {}
-            :hrsh7th/cmp-path {}
-            :hrsh7th/cmp-cmdline {}
-            :hrsh7th/nvim-cmp {:mod :cmp} ;; completion
+            :hrsh7th/nvim-cmp {:requires [:hrsh7th/cmp-nvim-lsp
+                                :hrsh7th/cmp-buffer
+                                :hrsh7th/cmp-path
+                                :PaterJason/cmp-conjure
+                                :hrsh7th/cmp-cmdline
+                                :hrsh7th/cmp-nvim-lsp-signature-help
+                                :onsails/lspkind-nvim]
+                     :mod :cmp}
             :L3MON4D3/LuaSnip {} ;; snippets
-            :saadparwaiz1/cmp_luasnip {}
+            :saadparwaiz1/cmp_luasnip {:after :LuaSnip}
             :folke/trouble.nvim {:mod :trouble}
 ;; Debugging
             :rcarriga/nvim-dap-ui {:mod :dap :requires [[:mfussenegger/nvim-dap]]}
